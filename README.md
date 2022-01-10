@@ -1,4 +1,4 @@
-# Site-avec-Ajax-Jquery-
+# Site Météo-avec-Ajax-Jquery-
 Création d'un site avec Ajax et Jquery 
 
 Réaliser une mini site : 1 page
