@@ -1,5 +1,5 @@
 # Site Météo-avec-Ajax-Jquery-
-Création d'un site avec Ajax et Jquery 
+Création d'un site météo avec récupération des informations par une API et utilisation de jQuery.
 
 Réaliser une mini site : 1 page
 La page aura un bandeau d’image animé en haut qui scrollera 3 images (carrousel avec 3 images)
