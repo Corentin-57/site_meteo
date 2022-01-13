@@ -59,6 +59,11 @@
     margin-right: 50px;
 }
 
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
 
 .infos{
     display: flex;
@@ -69,7 +74,10 @@
     font-size: 60px;
     font-weight: bold;
     margin-top: 80px;
-    
+    background-color: #87ceeb;
+    padding: 20px 20px; 
+    border-radius: 30px;
+    color: white;
 }
 
 .nom-temperature{
@@ -83,17 +91,24 @@
 }
 
 #nom{
-    margin-right: 200px;
+    margin-left: 20px;
+    margin-right: 340px;
     width: 40px;
+}
+
+#vent{
+    margin-left: 20px;
 }
 
 #humidite{
+    margin-left: 20px;
     margin-right: 200px;
-    width: 40px;
+    width: 180px;
 }
 
-/* #vent{
-    width: 40px;
-} */
+#temperature{
+    margin-left: 20px;
+}
+
 
 
