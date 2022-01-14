@@ -5,8 +5,6 @@ $(document).ready(function(){
     });
   });
 
-
-
 $(function(){
     var largeur = 800;
     var vitesseAnimation = 2500;
@@ -31,10 +29,6 @@ $(function(){
 
 
 //Récupérer les infos de l'API
-
-// $(".btns").click(function(){
-//     $("#nom").fadeIn();
-// })
 
 function infoParis(){
     $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=paris&appid=cb5ce2ce842d9fe8f624dca7e7d327c5&units=metric', function(data) {
