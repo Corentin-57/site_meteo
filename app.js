@@ -1,9 +1,9 @@
 //Carrousel 
-$(document).ready(function(){
-    $("button").click(function(){
-      $(".ville").fadeIn(4000, 0);
-    });
-  });
+// $(document).ready(function(){
+//     $("button").click(function(){
+//       $(".ville").fadeIn(4000, 0);
+//     });
+//   });
 
 $(function(){
     var largeur = 800;
@@ -19,9 +19,16 @@ $(function(){
     setInterval(function(){ //Bascule l'image à gauche tous les 2 secondes 
         $carrouselConteneur.animate({'margin-left':'-=' + largeur}, vitesseAnimation, function(){ //-=permet d'appliquer la marge négative à chaque fois 
             slideActuelle++;
+            if(slideActuelle == 2){
+                // $('.slides').fadeOut().fadeIn();
+            }
             if(slideActuelle === $slides.length){ //Condition remet margin à 0 si dernière slide
                 slideActuelle = 1;
+                console.log($slides.length);
+                // $carrousel.css('opacity', 0);
                 $carrouselConteneur.css('margin-left', 0);
+                // $('.slides').fadeOut().fadeIn();
+                // $carrousel.delay(1000).css('opacity', 1);
             }
         }); 
     }, pause);
