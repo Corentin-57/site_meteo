@@ -1,38 +1,27 @@
 //Carrousel 
-// $(document).ready(function(){
-//     $("button").click(function(){
-//       $(".ville").fadeIn(4000, 0);
-//     });
-//   });
 
-$(function(){
-    var largeur = 800;
-    var vitesseAnimation = 2500;
-    var pause = 2000;
-    var slideActuelle = 1;
+document.addEventListener('DOMContentLoaded', function(){
+    var slideIndex = 0;
+    afficheSlides();
 
-    //Déclaration variable afin d'optimiser le code en appelant les éléments une seule fois
-    var $carrousel = $('.carrousel') 
-    var $carrouselConteneur = $carrousel.find('.slides'); //Récupère l'élément qui à la classe slides dans l'élément carrousel
-    var $slides = $carrouselConteneur.find('.slide');
-
-    setInterval(function(){ //Bascule l'image à gauche tous les 2 secondes 
-        $carrouselConteneur.animate({'margin-left':'-=' + largeur}, vitesseAnimation, function(){ //-=permet d'appliquer la marge négative à chaque fois 
-            slideActuelle++;
-            if(slideActuelle == 2){
-                // $('.slides').fadeOut().fadeIn();
-            }
-            if(slideActuelle === $slides.length){ //Condition remet margin à 0 si dernière slide
-                slideActuelle = 1;
-                console.log($slides.length);
-                // $carrousel.css('opacity', 0);
-                $carrouselConteneur.css('margin-left', 0);
-                // $('.slides').fadeOut().fadeIn();
-                // $carrousel.delay(1000).css('opacity', 1);
-            }
-        }); 
-    }, pause);
+    function afficheSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var puces = document.getElementsByClassName("puce");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < puces.length; i++) {
+        puces[i].className = puces[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    puces[slideIndex-1].className += " active";
+    setTimeout(afficheSlides, 2000); // Change les images toutes les 2 secondes 
+    }
 });
+
 
 
 //Récupérer les infos de l'API
