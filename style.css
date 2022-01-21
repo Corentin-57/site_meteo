@@ -21,6 +21,11 @@ img {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  border-radius: 50px;
+}
+
+.slideImg {
+    border-radius: 100px;
 }
 
 /* Afficher nom des villes */
